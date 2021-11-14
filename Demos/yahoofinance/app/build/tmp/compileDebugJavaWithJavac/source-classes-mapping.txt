@@ -1,7 +1,0 @@
-com/example/yahoofinancedemo/BuildConfig.java
- com.example.yahoofinancedemo.BuildConfig
-com/example/yahoofinancedemo/MainActivity.java
- com.example.yahoofinancedemo.MainActivity
- com.example.yahoofinancedemo.MainActivity$1
- com.example.yahoofinancedemo.MainActivity$2
- com.example.yahoofinancedemo.MainActivity$3
