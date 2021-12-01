@@ -33,7 +33,6 @@ public class callYahooFinance {
      * @param interval: 1m 5m 15m 1d 1wk 1mo
      */
     public static double[][] requestSpark(String[] tickers, String range, String interval, Context act, RequestQueue requestQueue){
-        sparkCallbackData = null;
         String strTickers = "";
         for (String ticker : tickers){
             strTickers += (ticker + ',');
@@ -69,6 +68,7 @@ public class callYahooFinance {
                                     arrData[i][c] = price;
                                 }
                             }
+                            delisfunction(data);
                             sparkCallbackData = arrData;
                         } catch (Exception e) {
                             e.getStackTrace();

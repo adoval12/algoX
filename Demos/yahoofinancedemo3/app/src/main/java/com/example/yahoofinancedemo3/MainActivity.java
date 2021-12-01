@@ -58,6 +58,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void requestSparkSync(View view){
+        String[] temp1 = new String[]{"TSLA", "MSFT"};
+        double[][] data = YahooFinance.requestSpark(temp1, "5d", "1d", requestQueue);
+        txtResponse.setText(Arrays.deepToString(data));
+    }
+
+    public void requestSparkSyncOkHttp(View view){
+        String[] temp1 = new String[]{"TSLA", "MSFT"};
+        double[][] data = YahooFinanceOkHttp.requestSpark(temp1, "5d", "1d", requestQueue);
+        txtResponse.setText(Arrays.deepToString(data));
+    }
+
     public void requestChart(String ticker){
         Context act = getApplicationContext();
         // SECRET KEY
@@ -152,7 +164,9 @@ public class MainActivity extends AppCompatActivity {
         strTickers = strTickers.substring(0, strTickers.length() - 1);
 
         // SECRET KEY
-        String key = "3Z8LSHmB1l8lfS6qpRoba35QRos3zDZ69s2JS8IJ";
+        String oldkey = "3Z8LSHmB1l8lfS6qpRoba35QRos3zDZ69s2JS8IJ";
+        String key = "PdF8chYrre8QDuxrf6Tdz35AIlhDLgtH4IIymY6J";
+
         // Build URL
         String url = "https://yfapi.net/v8/finance/spark?";
         url = url + "interval=" + interval;    //add sampling interval
