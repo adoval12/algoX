@@ -68,7 +68,6 @@ public class callYahooFinance {
                                     arrData[i][c] = price;
                                 }
                             }
-                            delisfunction(data);
                             sparkCallbackData = arrData;
                         } catch (Exception e) {
                             e.getStackTrace();

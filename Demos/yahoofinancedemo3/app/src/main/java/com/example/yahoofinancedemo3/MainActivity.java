@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                                 double[] row = {JSONopen.getDouble(i), JSONhigh.getDouble(i), JSONlow.getDouble(i), JSONclose.getDouble(i)};
                                 finalData[i] = row;
                             }
-                            txtResponse.setText(Arrays.deepToString(finalData));
+
                         } catch (Exception e) {
                             e.getStackTrace();
                         }
